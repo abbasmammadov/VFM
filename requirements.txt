@@ -1,0 +1,33 @@
+# Install a CUDA-matched PyTorch build FIRST, e.g.:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# then: pip install -r requirements.txt
+
+# core
+numpy
+scipy
+Pillow
+tqdm
+
+# models / training
+diffusers
+transformers
+timm
+accelerate
+wandb
+
+# evaluation / preprocessing (FID + FD-DINOv2, edm2-derived tooling)
+click
+requests
+packaging
+
+# checkerboard toy demo
+matplotlib
+
+# optional: faster PNG decoding for the latent-caching dataset
+# pyspng
+
+# optional: FlashAttention with forward-mode (JVP) support for MeanFlow training.
+# Not required — the code falls back to PyTorch SDPA (--attn-func torch_sdpa).
+# See scripts/slurm/build_flash_attn.slurm.
+# flash-attn
+# triton

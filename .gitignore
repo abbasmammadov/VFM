@@ -205,3 +205,58 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Environments
+.venv/
+venv/
+env/
+.python-version
+
+# Experiment outputs / artifacts
+exps/
+samples/
+samples_inverse/
+wandb/
+results/
+*.log
+slurm-*.out
+slurm-*.err
+build_flash_attn_*.out
+build_flash_attn_*.err
+
+# Checkpoints & large data (ship via releases / HuggingFace, not git)
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.pkl
+!checkerboard/checkpoints/*.pt
+
+# Datasets
+data/
+datasets/
+*.zip
+
+# Caches
+hf_cache/
+.cache/
+torch_hub/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+.ipynb_checkpoints/
