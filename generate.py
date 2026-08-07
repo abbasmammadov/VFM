@@ -55,7 +55,7 @@ def main(args):
         raise ValueError(f"Unknown dtype: {args.dtype}. Must be one of ['fp16', 'bf16', 'fp32'].")
 
     # Load model:
-    vae = AutoencoderKL.from_pretrained("stabilityai/sd-vae-ft-ema").to(device)
+    vae = AutoencoderKL.from_pretrained("stabilityai/sd-vae-ft-mse").to(device)
     latent_size = args.resolution // 8
     block_kwargs = {"attn_func": "torch_sdpa", "qk_norm": args.qk_norm}
     if args.model in DMFT_models:
